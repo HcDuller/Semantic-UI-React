@@ -95,10 +95,14 @@ class Input extends Component {
 
     /** The HTML input type. */
     type: PropTypes.string,
+    
+    /** The HTML inputMode type. */
+    inputMode: PropTypes.string,
   }
 
   static defaultProps = {
     type: 'text',
+    inputMode: 'text'
   }
 
   inputRef = createRef()
@@ -176,6 +180,7 @@ class Input extends Component {
       size,
       transparent,
       type,
+      inputMode,
     } = this.props
 
     const classes = cx(
